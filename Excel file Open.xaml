@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1533,1179" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1533,989" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="36">
+    <scg:List x:TypeArguments="x:String" Capacity="72">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -37,6 +37,7 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -190,27 +191,34 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">170,372</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">270,423 270,453 250,453 250,480</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">270,423 270,520</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,664" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[index &lt; tableArray.Length]">
                           <ui:IfElseIfBlock.Then>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,325" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="571,2288" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="jobTitle">
+                                  <Variable.Default>
+                                    <Literal x:TypeArguments="x:String">לא קיים בגוגל</Literal>
+                                  </Variable.Default>
+                                </Variable>
+                              </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: דואר - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" ScopeGuid="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: דואר - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="529,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_19" ScopeGuid="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1468" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1507" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,10 +229,23 @@
                                           <uix:TargetAnchorable DesignTimeRectangle="2525, 150, 40, 40" ElementType="Button" FriendlyName="'push button אנשים'" FullSelectorArgument="&lt;wnd omit:aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' omit:cls='Chrome_WidgetWin_1' omit:title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl omit:name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl omit:name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' automationid='' /&gt;" Guid="35b8113a-0e8c-415d-923e-7d99d89c3964" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOjSURBVFhH7Zjtb1NVGMBP1M9KjMgHjQgaxc0gkTeRqJ80MXz0bzAmIkuYiEV0EDQm0xCCIeEj+2IkMSaKcdaObt1gK4Wx0rV7L2/d1vVlfVk39gLoj5x7bdfee1Y6vHWd7sMvTc957nl+eXr6nJMr5jJxKpXZzDgzmSS3MmmmJjNMTk4ijEGVxIpwuVkRLjfLWrimoZ2aho7lI7yr3qHxHxaeUIwZ5+8Xs0jUwtlEpaBYNEcpMYvkfyhcTKjY3ANijbCCoViScyNpIsmEKek/wXLhSCJBjX+O1z3w2gV4pQ2OBKZNiXPI54xjRbBc+CPfHG9cIsc2N1S1wPHeqYLEzt4w3zhDNPqGTVLFsFR4KJpkS8e8rGTHBah2wVuuu7mktj9CiK+vIY4MIj4L8MHpQZPYQlgq3DqcZlMb7Lw4L7ylHTY44ZlGmJ2IE43HEF8FEfU3EF8OIQ4GEB934b86apJTYanwWCLBhmbYdE4XffW8Xt11DtjVeluL8QbDiMP9enUP9SNsfsTeyzi8N01yKiwVlgvW+aZ5zgEvnIXnm2CtHdb8Cj8FM7m46qN9iAN+xKfdiNouVts6uZWOmeRUWCect+ixwBQ7m+/y1G/wrut2gayko3+EN7/r4aHay2yr92HvKq26ZRPWmIgzm1bEqWIXgaXC8dQ4/kiKQDRFT1T/lN+7IylOuAb52T3A71du0tQT1gmM0tQ9QpNvmGAobJJTYZnwj1czvNQMm88Xdomt7VDdAs/a4fGGKA/X2hF1Xr1D1PUhbPo+Frs91HzfaxI0YonwTDpOlfMv7VSTJ5yxD29shfUOePIMPHpCinbqffjwgNaHxT4vYs9FHtntJpMs/uezRDiWGNc6gmxn+dWVbHfDyy69wk/8AqtOxRA2d16F/VofFns8rPnEw4xcMyuYzWG1sOQ99x02tun3h6yslJe9+EUnPN2oCz/2bTdivwfxRR/iYA9iv0/rw6v2XeLslZBZtlzCnaMpbQ/LbSEPDYmsuByT1V19Bt5pucP1UJjjzuu8/0OQt0/28eHpAU42X2NkLGL6+csqLJF3ib3eWe2yI0Xl4SEPjir7n3zeNV0Yb5QrEUuFcwtPxLkRS+AbSzE2nlg47gEom3BRFCKlYq3wYlDIlMLSCUsUQvdjaYXzUcipqBxhiUKwAHmhqijhLEbRiq2wimUnLFlAeP51q/GBpWYB4fkX2sYHKoEV4X+JyhNWtLL8+coVNo7/jUr4HpZ+9DMGVVUyAAAAAElFTkSuQmCC" InformativeScreenshot="44d6fd9114498757eb3a145f1005255d.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='דואר - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
-                                      <uix:NClick ClickType="Single" DisplayName="Click 'איש קשר'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
+                                      <uix:NClick ClickType="Single" DisplayName="Click 'איש קשר'" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
                                         <uix:NClick.Target>
                                           <uix:TargetAnchorable DesignTimeRectangle="2368, 95, 140, 32" ElementType="Button" FriendlyName="'איש קשר'" FullSelectorArgument="&lt;wnd omit:aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' omit:cls='Chrome_WidgetWin_1' omit:title='‫אנשים *‏ Outlook‬' idx='11' /&gt;&lt;ctrl omit:name='אנשים *‏ Outlook' role='document' /&gt;&lt;ctrl omit:name='סרט' role='pane' idx='1' /&gt;&lt;ctrl omit:name='בית' role='property page' /&gt;&lt;ctrl omit:name='חדש' role='grouping' idx='21' /&gt;&lt;ctrl name='איש קשר חדש' role='menu button' /&gt;&lt;ctrl name='איש קשר חדש' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='סרט' role='pane' /&gt;&lt;ctrl name='בית' role='property page' /&gt;&lt;ctrl name='חדש' role='grouping' /&gt;&lt;ctrl name='איש קשר חדש' role='menu button' /&gt;&lt;ctrl name='איש קשר חדש' role='push button' automationid='' check:fulltext='איש קשר חדש (Ctrl+N) צור איש קשר חדש.' /&gt;" Guid="e6ba6fef-6744-4ffc-b72e-331a1eedd012" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANLSURBVHhe7ZzPaxpBFMfz/+XePyB/Qc+55NIeeuutIF7spTn10lMsqYcSUkhaJKQY27Q0GlBIDCLLEhH5llkdd/bNm3Vndwm6eQ8+4M6P99Y3350fou5ATKyA7dACMTHOhuOQFkW2s/umCYUy/VoQKC/efsGrj22c/bkTAQn5edn4lhCRCEjwRs1EIiAhN2o5EwEJhRABCYUQAQmFEAEJhRABPQP2mgNcT2arwQ4mE7SaX612eRABVZ3jEYL5DL3LLvZrTezWzlG/DKKy9jHT3hMRUKU5R+sBGF79sOoOrkLgYYB9q48fIqBKc4seQrTUzEPragMMEeCIlnsiAqo0Wyago3sguOnGZWr9NW6yfjMD7m+X5Yw9jlBXbS/YWvQu7JgLVKKIaV8RXbQfSX8Vw2gT3zvjS1vCp4mPf1q36JvIm86VM15WtmwJWwlElxEBWQLTqISa/UjyY19pIkqiYjkH0IrBCMBi0SZxnyReZv/0/THvrRwBKd93eGA30VOcbdwmmiYm7Sk0sMqpH6OdawAtokGJTxpU3MnrLAJy35ftj16vEZAu42ZrJpYv23OMZ2YcZxINsgrIL6lqKTKOqsyMEMdMa2vgKrfqPP0vr9vGrGnlpGxqHXzqhwjmSwXMZxj2e3jH7ZdSKFdARqKiwU5s0kgSDaxk0QQvKSQgQ9x0eaPCzxU/t3/zwVouk8pccTJw8H0SC4PadIzDRhdt/ouFQDhC3UNE2koSkJEAOgBkijZ5EgGZm2Piw9pvsPHdM6i3/zS/zH7Ij3+4Vh8SttxL1Pu+qa4QrYY6kcU27f+2+rjQVpKAGDFE0Cl9TR92AIsKyCWAxcCnnaBWDwZzTzEe/tf1S3nY1pNydI/4i87UUEsUh5w81Sxl9ePRVpqAFksXYykD/zQCWi4tjFnCNuKv+mSIm9l/AkZA3DKYmQucBcrfOVOn0GJRMw+pW81E2cWrrTQBVQKHgLeFvZMxprMQJ59PrbqNn4EqwZYLSKE30sH9CK3TDl5/iPdEG70HqgQVEFBE4ycOf40xDOeYas1s9imsIlRFQGls5udAwnNDBCQUQgQkFEIEJORGflgoFEJ+2izkRv5cQciF8+9dEldiYp4mAhIrZP8BIVB4QPqbcfIAAAAASUVORK5CYII=" InformativeScreenshot="3c713725ef03bde96ad50a0076cbcf7c.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='דואר - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                                         </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Target>
+                                              <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='אנשים *‏ Outlook' /&gt;&lt;wnd aaname='אנשים *‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים *‏ Outlook‬' /&gt;&lt;ctrl name='אנשים *‏ Outlook' role='document' /&gt;&lt;ctrl idx='5' role='grouping' /&gt;" Guid="56ebb05a-305a-45d2-88f5-c993048cf43c" SearchSteps="Selector" />
+                                            </uix:VerifyExecutionOptions.Target>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
                                       </uix:NClick>
                                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="5" DisplayName="Type Into 'editable text שם פרטי'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_24" ScopeIdentifier="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Text="[tableArray(index)(0)]" Version="V1">
                                         <uix:NTypeInto.Target>
@@ -259,7 +280,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NApplicationCard>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: חיפוש - Microsoft Bing" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" InteractionMode="DebuggerApi" ScopeGuid="79190c99-a2aa-49d9-8636-44ef96d98765" Version="V1">
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: חיפוש - Microsoft Bing" sap:VirtualizedContainerService.HintSize="529,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_18" InteractionMode="DebuggerApi" ScopeGuid="79190c99-a2aa-49d9-8636-44ef96d98765" Version="V1">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
@@ -295,7 +316,71 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </uix:NApplicationCard>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: אנשים - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="29aeaebd-fc5b-4f43-a9df-cd29dca29c8a" Version="V1">
+                              <If Condition="[tableArray(index)(4) &lt;&gt;&quot;Non&quot;]" sap:VirtualizedContainerService.HintSize="529,787" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="493,621" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,529" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+                                      <ui:IfElseIf.ConditionBlocks>
+                                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                          <ui:IfElseIfBlock BlockType="If" Condition="[tableArray(index)(4) = tableArray(index)(3)]">
+                                            <ui:IfElseIfBlock.Then>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[jobTitle]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">הטלפון בגוגל תואם</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </ui:IfElseIfBlock.Then>
+                                          </ui:IfElseIfBlock>
+                                          <ui:IfElseIfBlock BlockType="Else">
+                                            <ui:IfElseIfBlock.Then>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[jobTitle]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">הטלפון בגוגל אינו תואם</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </ui:IfElseIfBlock.Then>
+                                          </ui:IfElseIfBlock>
+                                        </sc:BindingList>
+                                      </ui:IfElseIf.ConditionBlocks>
+                                    </ui:IfElseIf>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: אנשים - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="529,1187" sap2010:WorkflowViewState.IdRef="NApplicationCard_17" ScopeGuid="29aeaebd-fc5b-4f43-a9df-cd29dca29c8a" Version="V1">
                                 <uix:NApplicationCard.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
@@ -323,7 +408,7 @@
                                           <uix:TargetAnchorable DesignTimeRectangle="1386, 918, 180, 36" FriendlyName="'כותרת'" FullSelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='הוסף תחום עבודה' role='popup menu' /&gt;&lt;ctrl name='כותרת' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='הוסף תחום עבודה' role='popup menu' /&gt;&lt;ctrl name='כותרת' role='menu item' automationid='' check:text='כותרת' /&gt;" Guid="0d37f453-52c5-4ff4-8842-45835fa0320d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALgAAAAoCAYAAABNVTCEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVHhe7dhbasJQEIDhs7asRHArZiPFlehK8uYVBO/XU8Y2Npmc6Am0lTP8Hwy0Tpmnv0F1t9vNy1yv1/tcLpencz6fGeZto3vUU3Zcdu2qYZ9Op/scj8fgHA4Hhnn76C7LKfuthu7Kp7L8AlggLZdPeyc/7HY7/TdA0qRpadvJo329Xus9kDRpWtp28p5mtVrpPZA0aVradvv93i+XS70HkiZNS9tO3qssFgu9B5ImTUvbbrvd+vl8rvdA0qRpadttNhs/m830HkiaNC1tO/m0OZ1O9R5ImjQtbRM4TKoFPplM9B5ImjRN4DCLwGEagcM0AodpBI7XxrnPsiwwuR89/mjkc73vD33R+Y73vhj63uO15t3eR+3qUwSOOBJnMNieH7b0Nhq0RB56rXqnFrj2FXxs5ASOOKEwvyNuje0eqvoHiLnzNPCIfQWBI05MmA3ytP2DwEN3WxA44sSE2RAIMeYOgePfxYTZEAgx5s6rwF/tKwgcUYqPns8GzaS6Bh5152nAfMjEr/r5mi4f612XwDvcqQVe+GGfrwmBIAKHaQQO0wgcphE4TCNwmEbgMI3AYRqBwzQCh2kEDtMIHKYROEwjcJhG4DCtDPwTmSagB5pFmoQAAAAASUVORK5CYII=" InformativeScreenshot="994b0234faba2621a8dab7d18bf75ce7.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='אנשים - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                                         </uix:NClick.Target>
                                       </uix:NClick>
-                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text כותרת'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_22" Text="somethin" Version="V1">
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text jobTitle'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_22" Text="[jobTitle]" Version="V1">
                                         <uix:NTypeInto.Target>
                                           <uix:TargetAnchorable DesignTimeRectangle="994, 848, 280, 25" ElementType="InputBox" FriendlyName="'editable text כותרת'" FullSelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='מקטע עבודה' role='grouping' /&gt;&lt;ctrl name='כותרת' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - אילון עזרא -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - אילון עזרא -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='מקטע עבודה' role='grouping' /&gt;&lt;ctrl name='כותרת' role='editable text' automationid='' /&gt;" Guid="755faba8-47d1-4b6d-87ca-6576b95effb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARwAAAAdCAYAAAB439PxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACCSURBVHhe7dSxDYAwEARBF4qQ+2/CZAQQ/0Yz0iVXwK4DEFnfA2CK4AAZwQEyggNkBAfICA6QERwgIzhARnCAjOAAGcEBMoIDZAQHyAgOkBEcICM4QEZwgIzgABnBATKCA2QEB8gIDpARHCAjOEBGcICM4ACZNzj7vszMRvYLDsC0B/gsJmuhtX4VAAAAAElFTkSuQmCC" InformativeScreenshot="23ed8ae730a389d6f4a4815a633bdb2d.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='אנשים - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
                                         </uix:NTypeInto.Target>
@@ -347,7 +432,7 @@
                                 </uix:NApplicationCard.TargetApp>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
@@ -379,9 +464,9 @@
                     <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">119,480</av:Point>
+                          <av:Point x:Key="ShapeLocation">139,520</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">119,510 89,510 89,397.5 170,397.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">139,550 109,550 109,397.5 170,397.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -425,21 +510,6 @@
       </ui:LogMessage>
     </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">880,369</av:Point>
-          <av:Size x:Key="ShapeSize">200,22</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <TerminateWorkflow DisplayName="Terminate Workflow" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_1">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </TerminateWorkflow>
-    </FlowStep>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

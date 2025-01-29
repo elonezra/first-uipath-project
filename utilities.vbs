@@ -5,22 +5,42 @@ sub WriteToCell(sheetName As String, cell As String)
 End Sub
 
 
-Function readRow(sheetName As String, index As String) As String
+Function readRow(sheetName As String) As String
     Dim ws As Worksheet
     Set ws = ThisWorkbook.Sheets(sheetName)
+    
+    Dim lastRow As Integer
+    lastRow = ws.Cells(ws.Rows.Count, "A").End(xlUp).Row ' מוצאים את השורה האחרונה עם נתונים
+    
+    Dim i As Integer
     Dim fname As String, lname As String, email As String, phone As String, google As String
+    Dim rowValues As String
+    Dim result As String
+    
+    result = "" ' אתחול מחרוזת התוצאה
 
-    fname = ws.Range("A"+index).Value
-    lname = ws.Range("B"+index).Value
-    email = ws.Range("C"+index).Value
-    phone = ws.Range("D"+index).Value
-    google = ws.Range("E"+index).Value
-    Dim arr As Variant
+    For i = 1 To lastRow ' לולאה על כל השורות הקיימות
+        fname = ws.Range("A" & i).Value
+        lname = ws.Range("B" & i).Value
+        email = ws.Range("C" & i).Value
+        phone = ws.Range("D" & i).Value
+        google = ws.Range("E" & i).Value
 
-    If IsEmpty(google) Then google = "Non"
+        ' בדיקה אם התא ריק
+        If IsEmpty(google) Then google = "Non"
 
-    arr = Array(fname, lname,  email, phone, google)
-    readRow = Join(arr, ",")
+        ' חיבור כל הערכים של השורה למחרוזת אחת
+        rowValues = Join(Array(fname, lname, email, phone, google), ",")
+
+        ' הוספת השורה לתוצאה עם הפרדה בטאב בין שורות
+        If result = "" Then
+            result = rowValues
+        Else
+            result = result & vbTab & rowValues
+        End If
+    Next i
+    
+    readRow = result 
 End Function
 
 ' copiedTable.Split({ vbCrLf }, StringSplitOptions.RemoveEmptyEntries). 

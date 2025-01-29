@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="623.2,701.6" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Flowchart" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1516,967" sap2010:WorkflowViewState.IdRef="Flowchart_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -36,10 +36,10 @@
       <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -68,18 +68,154 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Flowchart" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="index" />
+      <Variable x:TypeArguments="s:String[]" Name="row" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
-        <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+        <av:Point x:Key="ShapeLocation">10,22.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">70,60 110,60</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Null />
+      <x:Reference>__ReferenceID2</x:Reference>
     </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID0">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">400,34.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">500,86.5 500,136.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Contacts.xlsx">
+        <ui:ExcelApplicationScope.Body>
+          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,539" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:Object" Name="Data" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InvokeVBA CodeFilePath="utilities.vbs" DisplayName="Invoke VBA" EntryMethodName="readRow" EntryMethodParameters="[{&quot;sheet1&quot;,index.ToString()}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" OutputValue="[Data]" />
+              <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="utilities.vbs" DisplayName="Invoke VBA" EntryMethodName="WriteToCell" EntryMethodParameters="[{&quot;sheet1&quot;,&quot;F&quot;+index.ToString()}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_1" />
+              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:String[]">[row]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:String[]">[Data.ToString().Split({","c}, StringSplitOptions.None)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[row(0) + row(1) + row(2)+ row(3) +row(4)]" />
+            </Sequence>
+          </ActivityAction>
+        </ui:ExcelApplicationScope.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ExcelApplicationScope>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">400,136.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,52</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: דואר - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="434,998" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="39d9d618-ddba-48df-ac67-37ca38277c6f" Version="V1">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,706" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'graphic אנשים'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39d9d618-ddba-48df-ac67-37ca38277c6f" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable Accuracy="1" DesignTimeRectangle="2535, 159, 20, 20" ElementType="Icon" FriendlyName="'graphic אנשים'" FullSelectorArgument="&lt;wnd aaname='דואר - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫דואר - * -‏ Outlook‬' /&gt;&lt;ctrl name='דואר - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' /&gt;&lt;ctrl name='אנשים' role='graphic' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='דואר - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫דואר - * -‏ Outlook‬' /&gt;&lt;ctrl name='דואר - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' /&gt;&lt;ctrl name='אנשים' role='graphic' automationid='' /&gt;" Guid="c81004ec-c306-4c36-9247-ce644f74f7e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALZSURBVEhL1ZXJT1NRFIdv1LUaI7rQxFmpU4xoFIeNLnTrf2BcmOCwABxAgxo1MUhYGF24dGGUsNBYp4pUJhXaWkhbpmqpJUYqHcC+FgICfua+J7Svr0Cqblz88pp7z/t9556ec58YGFb4e8VSpN8T6QvZK9X8jwDGl/R76dLvzQKY7uXp9rMCxHANxKkJDuFXpjPLJH1sRkCPEuekZ4w9NtjVDNuaoKxzNIPZ7BLpC1IF7jH2O5iShJjeQEX3iC7uuTfM9bqvPPJ8M3hMC3BF4+x8nzSXyrfBpnrY3zgxFVf8ug9xw4+4+hFxsZ1jVT6DeUaApW9ILcleWxKw4x3kWmHFS4gOxfAPDCKu+xDlAcS1T4iLHYjiVuyB0OyAnphC7hut7tJ4+1st+1Wv4HDjuBrzvjeCuNytZS+fpR5EoZMn7uDsAKlSzyhramB9Lax9DSsssPQpPPg8PBWTW/nb+LxbzT6nxEko8d3glREgVd45Qn7dBMuewaGGcZ25lPVTiH23O5lT6CTvppvHrj6Dx4yAScmap69lIwOgV1GwRxI4ogk+RLWnPZrAFklQ2dRDlcPHY08f5u6wpq4Q5o5+zO3fcH+NzAy4HxhW/+C8d7DXnuwi2bab6mDlK1h0r5+5RRbEpTatgy51IUrciCIn4pSNgofezIDIUIyNVtjaiDrB6XOwpQFW18ASM8y/I40/aHNwxYu40I4obkOctjPvRDNBZdAICCiK2jGyPfelZC+1uwU212snWPwEFt4LIUqakyeQ3VTcqgKWnLWryRoAUkdaxtUTSMNJc1kqOQsbrLD8hQZYUOFBnLMhyrq07M+51DlYcMbBM4++m3SApv4EJuvPqSGTtZe/5T0kZyHHDAfrx+gIhrlZ/4Wj1X4O3PVyvNrHrYZePoajOnMDQEreRaddP1RTUx2sq9XMTZafnHdlf6MaAKnqHIjTEk5k+T3Qa0bAv9D/D/gFp2Xph2DVIxwAAAAASUVORK5CYII=" InformativeScreenshot="bfc97c76bf1a84656bc11f486da62a29.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='דואר - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target DesignTimeRectangle="2525, 150, 40, 40" ElementType="Button" FriendlyName="'push button אנשים'" FullSelectorArgument="&lt;wnd aaname='דואר - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫דואר - * -‏ Outlook‬' /&gt;&lt;ctrl name='דואר - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='דואר - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫דואר - * -‏ Outlook‬' /&gt;&lt;ctrl name='דואר - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='left-rail-appbar' role='grouping' /&gt;&lt;ctrl name='אנשים' role='grouping' /&gt;&lt;ctrl name='אנשים' role='push button' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOoSURBVFhH7ZfNb1RVGIdP1LUYIrjQBMGvVtQYkQACG13o1v/AuDBBZQFVKBLQAAkBwoLowiULA4SFhBG1FIZ+Ce1MKWRm+gltbWNo6Xy0zL0zDdjCY869Tmd6zp3O0DkXjJnFkztz7zu/+8ybM+89IyanLQpJLQI1wyR3shbpjIVl29i2jchdUCXKRb2Baf4fwqpEOajBfqEJqyLloIb6ScXCamBlpD3Ozec/JCxlC1GvuxQVVgv9p7SsxFNYLXo0lJaVuMK2PtYeDeV1tZDHKFzemp1H1lfhhSRU2cLaYud9FV7gpp7XFxLOX5/y+tHp4Q9LmsikTeN4lmHLfV8epWuNCw9ZNl/EZngvBOva4e022NN7T7vxYlmksB6UY0t0hs2dzCGlay/Bkf678+p+HUhwoOkWP8duaxkLYVQ4krJZeyUvK9kQgtXNsLn1/lxd3YUxxMFhxL4biN3dfHpqUMsqxiKE9ZAcDWNZZwlsDOWF370MNUFY8TuksmmGJ6cQBwYRh0YQ+28idvcg6q4RHolreV4YFR5KW9RcctetFH3nD7e7K8/DR62zTs2V0STi2363u/K4K4bY1sXZ6LiW50URYb2wXHbF7vFSI7x6EV6+ACsa4Llf4MSf03M1NUf/Fd0Zdbq7rL6LeOaOluXF1HTarLDkUO9dNjTd5/lz8GHL7DxZSfBmnE3f9/LEti7WHI5yJjKmZRTDF+Eccs2q5yrFqPCoZRFOZuhMZbiaco/hVIZQMsPRtiFOdQ5yJjZGoD/h0hcn0DNBoPs20VtJLc8LY8I/jUw7P7g1l2FjOD8l5Jhb3QQvnoelxyd4cnsDYu91d0Ls7UPURxHbuxBfhthyckDLVTEinMymeT0Ib7XiPOHUOfxmC6xqhOUBePoHKXrVncPfDSC+6UbUXUdsDfPU5+2MW1NafiFGhEcsy5kIcpxtKuiuZH0HvNHsdvjZs/DM8Tiivj3fYTkt6q45wsu/DjtfXs0vxIiw5OOOWafDUjAnK5eGnMWvBeGF31zhJUdiiB0hxJ4+t7s7Is4cXvJVJ+dipaeFMeG2iQy1wQdzDw25duVruY+Qs3hZAD5onqFnPMHh5r/45PQw7/84wGenBznWMsqNRErL9MKYsETuJbZG/nYka5vglYuubG3DA3ZGzOzYjAoX0jtp05HIPOR+uDSucNq8sF9Uhf2mKuw3VWG/qQpXjvyrVJyqcOXokj4K6zfQUT+jotY/duHKMCish/uBl/A/OphED1lKINUAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'איש קשר'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39d9d618-ddba-48df-ac67-37ca38277c6f" Version="V1">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="2368, 95, 140, 32" ElementType="Button" FriendlyName="'איש קשר'" FullSelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='סרט' role='pane' /&gt;&lt;ctrl name='בית' role='property page' /&gt;&lt;ctrl name='חדש' role='grouping' /&gt;&lt;ctrl name='איש קשר חדש' role='menu button' /&gt;&lt;ctrl name='איש קשר חדש' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='סרט' role='pane' /&gt;&lt;ctrl name='בית' role='property page' /&gt;&lt;ctrl name='חדש' role='grouping' /&gt;&lt;ctrl name='איש קשר חדש' role='menu button' /&gt;&lt;ctrl name='איש קשר חדש' role='push button' automationid='' check:fulltext='איש קשר חדש (Ctrl+N) צור איש קשר חדש.' /&gt;" Guid="82629dc2-0c33-4234-bc2c-217c7b743fda" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJAAAAAkCAYAAABmHbPbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANLSURBVHhe7ZzPaxpBFMfz/+XePyB/Qc+55NIeeuutIF7spTn10lMsqYcSUkhaJKQY27Q0GlBIDCLLEhH5llkdd/bNm3Vndwm6eQ8+4M6P99Y3350fou5ATKyA7dACMTHOhuOQFkW2s/umCYUy/VoQKC/efsGrj22c/bkTAQn5edn4lhCRCEjwRs1EIiAhN2o5EwEJhRABCYUQAQmFEAEJhRABPQP2mgNcT2arwQ4mE7SaX612eRABVZ3jEYL5DL3LLvZrTezWzlG/DKKy9jHT3hMRUKU5R+sBGF79sOoOrkLgYYB9q48fIqBKc4seQrTUzEPragMMEeCIlnsiAqo0Wyago3sguOnGZWr9NW6yfjMD7m+X5Yw9jlBXbS/YWvQu7JgLVKKIaV8RXbQfSX8Vw2gT3zvjS1vCp4mPf1q36JvIm86VM15WtmwJWwlElxEBWQLTqISa/UjyY19pIkqiYjkH0IrBCMBi0SZxnyReZv/0/THvrRwBKd93eGA30VOcbdwmmiYm7Sk0sMqpH6OdawAtokGJTxpU3MnrLAJy35ftj16vEZAu42ZrJpYv23OMZ2YcZxINsgrIL6lqKTKOqsyMEMdMa2vgKrfqPP0vr9vGrGnlpGxqHXzqhwjmSwXMZxj2e3jH7ZdSKFdARqKiwU5s0kgSDaxk0QQvKSQgQ9x0eaPCzxU/t3/zwVouk8pccTJw8H0SC4PadIzDRhdt/ouFQDhC3UNE2koSkJEAOgBkijZ5EgGZm2Piw9pvsPHdM6i3/zS/zH7Ij3+4Vh8SttxL1Pu+qa4QrYY6kcU27f+2+rjQVpKAGDFE0Cl9TR92AIsKyCWAxcCnnaBWDwZzTzEe/tf1S3nY1pNydI/4i87UUEsUh5w81Sxl9ePRVpqAFksXYykD/zQCWi4tjFnCNuKv+mSIm9l/AkZA3DKYmQucBcrfOVOn0GJRMw+pW81E2cWrrTQBVQKHgLeFvZMxprMQJ59PrbqNn4EqwZYLSKE30sH9CK3TDl5/iPdEG70HqgQVEFBE4ycOf40xDOeYas1s9imsIlRFQGls5udAwnNDBCQUQgQkFEIEJORGflgoFEJ+2izkRv5cQciF8+9dEldiYp4mAhIrZP8BIVB4QPqbcfIAAAAASUVORK5CYII=" InformativeScreenshot="3c713725ef03bde96ad50a0076cbcf7c.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='אנשים - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'editable text שם פרטי'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="39d9d618-ddba-48df-ac67-37ca38277c6f" Text="[row(0)]" Version="V1">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="994, 336, 480, 25" ElementType="InputBox" FriendlyName="'editable text שם פרטי'" FullSelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='שם מקטע' role='grouping' /&gt;&lt;ctrl name='שם פרטי' role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - אילון עזרא -‏ Outlook' role='document' /&gt;&lt;ctrl name='שם מקטע' role='grouping' /&gt;&lt;ctrl name='שם פרטי' role='editable text' automationid='' /&gt;" Guid="09c2a745-b852-40a3-9e90-0c34da8957ad" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAeQAAAAdCAYAAAB7RB+cAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACcSURBVHhe7dWxDYAwAAPBDIpQ9l8idBTQJ1/cSW68wI8FABw3vgcAsJ8gA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0CAIANAgCADQIAgA0DAG+R5X2ZmZrZ5vyADAOc8D0f3m0HSe6sAAAAASUVORK5CYII=" InformativeScreenshot="49e415896f2b9381a925d367cf428759.png" ScopeSelectorArgument="&lt;wnd app='olk.exe' cls='Olk Host' title='אנשים - אילון עזרא -‏ Outlook' /&gt;" SearchSteps="Selector, FuzzySelector">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <uix:Target Accuracy="0.9" DesignTimeRectangle="1427, 320, 47, 16" ElementType="InputBox" FriendlyName="'שם פרטי'" FullSelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='שם מקטע' role='grouping' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='אנשים - * -‏ Outlook - תוכן אינטרנט' cls='Chrome_WidgetWin_1' title='‫אנשים - * -‏ Outlook‬' /&gt;&lt;ctrl name='אנשים - * -‏ Outlook' role='document' /&gt;&lt;ctrl name='שם מקטע' role='grouping' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAUCAYAAAAgCAWkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVFhH7ZSxDYMwEEWZjZ4BqOnp6dmETViCIaipHT2kTy7OOSIUkYn8JMRhm7v/8eEq/BFVPHBniplcKWZypZjJlRcz8zyHcRz3eFmWMAxD2LZtH6/rer+IGev7/hjjmqbpyEMOO9e2bVjX1VR6wnt2rc2lOtQEcvDMnTn0oVOcMiMY67ruTRjPCFZRcigG4pQhhNsPERsgl+atGRuLr8xALFRYUfGaWKAlNgNWB3OKGScP+X5qhnZpmuZogzPvCatDcbz7nr7kAeC1lNenwhNluWqGWnwU/a/eGpE0o9awhYi1zTGeKEHhs/8MWKFeO6XaNmkGtLU6ZVJGwGuzq6eZd6Kl5i0fzdyNYiZXiplceQDU3grGj2iHJgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 2576, 1408" FilePath="C:\Program Files\WindowsApps\Microsoft.OutlookForWindows_1.2025.122.200_x64__8wekyb3d8bbwe\olk.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVOSURBVFhH7ZN7TFNXHMcP0ywG+gCsNbose6qNy3SyzI3MDbUFZYrbf8seLsZtOp2AvJk4p0LUrQoqvtkcYjYfU6obWbQZKuh88Ia2tMUiBV/jgtAp8obvck5v6+2lIm7LkiX+km/annN7P9/fi5BH8X8PlY6bpNJxx1U6ro3XMXomfu5fD5WOU6h03A6VjutV6TiIRM/onUL8v38cE3K54SodF6XScS1ewGK1BG4ojyJRBcPF7/lbodJxoSodZ/ICGqCn99nhm3IeJOY8SFKVkSQbQ8XvG3KodNzzfG8HgMQad+g6/NOK4RNVAJJQBpJsFOoYSTY+7/Hy0WnWbGWqtV+ZaoVyrYVp1Bpeqy1QrDYzjfyK1yozAldVI/DLaozdVANVbiMDTzjaCGVGFYZFnwKJvUSzFsNd6iTJxg3k/aMSZkCZau1TpvJgHq6g4sEKL2CqgJVOjdtfgyd3W/F43GmQ6LMgiRVioKeiL4K8nQ2izjSTsKzRRAhmcC9gBufBgTw4IIXKBN/IXJBl+SBxJSDJhoFAl+LLQd49DDJzM0joLpCwLKoc4gYL4E+kWhF57AZySlrxQ5kDiXk38VSaxZ01BftTrTCBfKwbPOskA8iCPBDNFhD1dpCwPS44lYMIwTTjyek22Jq7QON2Zx9a23vZ92uObrySYXOD/b8wQU4BS/T3z3zJGZDwHSAzt4CE7haCmZHHZmeBiMtdeOUuA67VN2IUX/rY4zfZWdm1dh5uZHA5zc6bgeVFIO98DzJ9E4hmhwjshNNqSBYcAhH2+eUMGwMVNbR79JlmXVjbxu6CMy4zsDzRAFl8laeBhAqQ9w6DTNfSIROX2ylaiZlbMUytxbPfWUGEAzb/x6sMsrmw2aPPtNwbTzexu4/210OeUMXgsrhKpwFaiYW/gqjTQWZkCIdMAN4DotkOEqKFdP5eTNh/GRN/bgIRrtWCA7yBgmaPPsuTjNDmc+zug2w7A8tiKyGNqQCZfxgkfBtIyDfehsz5W7MTZHo6RszbinE7SxCU34pJJ27xBgRrFbyllkEu2O/e63OiAfIEA85cvsPuXlpnhiymAtLlFZBGl8NnahLIDLpa4iGjWe9iAzhco8UzG/IR/LsDr569jaB8xz0Dzj5XOzNeYUJRfTsDpeTdRECSAf6JBsTmXmdnBTV33GBpVDmkkWXwmZY6MGtqRr0NPiFfY0zcEUw714SQ8na8fqnNaeCUwIB4rYK0Nahv6WbAPzt64ehwrqGN68TE1SY3WLKsDJLPS0FeW8lgDErF+rwR8g+zMDXvCjTVXVAbOwcxIOizq9xjU4yIOXINORdvYd+FW1h2sAHK+EoPsGRpKfyWlMBvYQ6GabQgb6xnGjE3Ay/uLUaYpQuh5i7vBoQtEPbZOdlVbMCEfaZZS1zwpaWQUPBnJfBbXIzANeeg2FqLwHXlmHjAhjBzF2bV9CDM2j2IAcEQyhMN/e61YuBK72Bh1ouL4beoGL6fFjED43/6g0HCa3sx29aDWTXdDzAgqIAsvipbFlfZ71oraXTFgD67wXzWFOz7ySWMjNQj+Dc75tT14q26XoTX9jy8gfuFbFEWBtNzaQfxZl4RZptaMcfuMuCqwINaMAQDASn6joAUPbxpzPrTUBdaMKv0BubYOjHX3jdkA1M9DXSIue4YmW4+qUi3wJvGH2xAxJUORNh7EFHf91AGPNbwlya9mOsORWbdFEVmXZsisw5ijf22ARENfZh3tZ99PrQBVoGWthfymqeIuR7Bm9ArMus6xCbGH2lEmKXbXQE6iEPcgvagU44Tk0+2DA5/FP9V/AVY7vM8tVs0RAAAAABJRU5ErkJggg==" InformativeScreenshot="b5a21b36588de38ee90b6d865161d4de.png" Selector="&lt;wnd app='olk.exe' cls='Olk Host' title='דואר - אילון עזרא -‏ Outlook'/&gt;" />
+            </uix:NApplicationCard.TargetApp>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </uix:NApplicationCard>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">110,30</av:Point>
+          <av:Size x:Key="ShapeSize">262,60</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">372,60 400,60</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[index]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">2</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID0</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID1</x:Reference>
   </Flowchart>
 </Activity>

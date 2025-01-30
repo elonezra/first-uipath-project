@@ -88,11 +88,11 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">80,62.5</av:Point>
+        <av:Point x:Key="ShapeLocation">40,52.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">1509</x:Double>
         <x:Double x:Key="Height">888.07999999999993</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">140,100 190,100</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">100,90 180,90</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -101,12 +101,12 @@
     <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">190,74.5</av:Point>
+          <av:Point x:Key="ShapeLocation">180,64.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">290,125.5 290,155.5 280,155.5 280,170</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">280,115.5 280,170</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="False" DisplayName="Use Application: Contacts.xlsx - Excel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="e0ea2300-fd57-4e74-a723-ad1373f45752" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard AttachMode="ByInstance" ContinueOnError="False" DisplayName="Use Application: Contacts.xlsx - Excel" sap:VirtualizedContainerService.HintSize="434,819" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="e0ea2300-fd57-4e74-a723-ad1373f45752" Version="V1" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -122,7 +122,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DelayAfter="1" DelayBefore="1" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="334,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" ScopeIdentifier="e0ea2300-fd57-4e74-a723-ad1373f45752" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][d(ctrl)]c[u(ctrl)][u(hk)]" Version="V1" />
-              <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'תצוגה מוגנת'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0ea2300-fd57-4e74-a723-ad1373f45752" Timeout="4" Version="V1">
+              <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Click 'משחרר תצוגה מוגנת'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e0ea2300-fd57-4e74-a723-ad1373f45752" Timeout="4" Version="V1">
                 <uix:NClick.Target>
                   <uix:TargetAnchorable DesignTimeRectangle="1606, 88, 123, 25" FriendlyName="'הפוך עריכה לזמינה'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='סרגל כלים Business Bar' /&gt;&lt;uia cls='NetUIElement' name='תצוגה מוגנת' /&gt;&lt;uia cls='NetUISimpleButton' name='הפוך עריכה לזמינה' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='סרגל כלים Business Bar' /&gt;&lt;uia cls='NetUIElement' name='תצוגה מוגנת' /&gt;&lt;uia cls='NetUISimpleButton' name='הפוך עריכה לזמינה' role='לחצן' automationid='' check:fulltext='הפוך עריכה לזמינה' /&gt;" Guid="ae006347-5377-4a26-8ac3-343cdba75868" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAdCAYAAACDgbNCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAK7SURBVGhD7ZpfbtpAEMZzGO7BQbgHh+AFHmtVQSWkgnKCPlSVK6VIrYBEJckDp+CtJGoy1Uc10TCe9dpxaVJ7ftIoyf6ZnZlvd+1IPqH7W3Jrpp3oBrfm2IH4j/e3dP3jgiaT99Tr9dxqYuPxGV2tvtDD3Y0tPoQfjd7Rcrmk3W5HTn2AnovFgpIkOdgAT+JfrlKaz+d6nlMj1us1XS7TrPiz2ZS2260e79QI3ADn56Os+Hg2OPVnr7OL30xc/AbzX4rf7XZpOp3qZqckLn6DqSz+ZrOhVquVMQYicVu/39+3tdvtpzHo73Q6lKbpwXz4BRAaf+Mnw23S2LcmFp/li5Fx8u9s+Fsi5zGcl0b7gnG+6GPfsnbWurHcYlQW3wJC6OJwoIwsDBeDC4Ck5Xz4s5KXoJ3nx7DiY3RfSEBsGvQx1jirzULny/PQLjc90OtqdPx5HEV8YIkh22RhELBOUm6GItd80UIzVnwM+thXnl+5mZGDvn3y1tBYtbHEB7HTXXTdyuJjEWunWQFYCQIkqAscGhvCWg+UiY+R6+WtLX1gjDyRoXVDWBtO+5Rj4T+0Rl5ukqOKr4sWCspqt4oRIlQkUCY+JrYeo+OWJzJ0akOE8kU7/MpbpYj4ReJ/NeJrQsWwkI8ITZn4mLw+ic5HxpkXk0XRfOGTN9lzcpO8uPihU1ukGFwI7VNSJj5Q5oVJ58PvLogp9o6iKZIvQB/fKGVz0xxdfATLb+qWUPJ6lG/1sFgxrE2jicWX969eDBZf5/gcLPFhOjb5KInlFqOy+M4fEapSVLC/iYv/SnDxnX+Ki99gTPFnHyb+7V7Ngb7jM+NLntXi8/4bL6e+4CPO798+ZcV/vLuhwWDgG6CG4MRD1+FwSL9+XmfF5w2AGyBJ3uyfDW71sNPTt/T14iM97ALf7bs1z1z8Bttv8AombyavOEoAAAAASUVORK5CYII=" InformativeScreenshot="50ee37a67b716c398e412135e60d9415.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Contacts.xlsx  -  תצוגה מוגנת - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
                     <uix:TargetAnchorable.Anchors>
@@ -205,7 +205,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">270,423 270,520</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="622,1650" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                  <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                     <ui:IfElseIf.ConditionBlocks>
                       <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                         <ui:IfElseIfBlock BlockType="If" Condition="[index &lt; tableArray.Length]">
@@ -529,21 +529,6 @@
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
-    </FlowStep>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">570,184.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[tableArray(3)(0)]">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:LogMessage>
     </FlowStep>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>

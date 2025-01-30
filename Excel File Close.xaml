@@ -87,9 +87,9 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">10,12.5</av:Point>
+        <av:Point x:Key="ShapeLocation">10,22.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">70,50 100,50 100,60 110,60</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">70,60 110,60</av:PointCollection>
         <x:Double x:Key="Width">1193</x:Double>
         <x:Double x:Key="Height">683.88961282159426</x:Double>
       </scg:Dictionary>
@@ -121,7 +121,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeVBA CodeFilePath="utilities.vbs" DisplayName="Invoke VBA" EntryMethodName="readRow" EntryMethodParameters="[{&quot;sheet1&quot;}]" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeVBA_2" OutputValue="[Data]" />
-              <Assign sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign DisplayName="split the data from the function" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_3">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[][]">[row]</OutArgument>
                 </Assign.To>
@@ -131,7 +131,7 @@
     ToArray()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[row(0)(0)]" />
+              <ui:LogMessage DisplayName="Log Message just to be sure" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[row(0)(0)]" />
             </Sequence>
           </ActivityAction>
         </ui:ExcelApplicationScope.Body>
@@ -150,7 +150,7 @@
               <av:PointCollection x:Key="ConnectorLocation">500,186.5 500,230</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="622,846" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
             <ui:IfElseIf.ConditionBlocks>
               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                 <ui:IfElseIfBlock BlockType="If" Condition="[index &lt; row.Length]">
@@ -164,7 +164,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: דואר - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="434,1759" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: דואר - אילון עזרא -‏ Outlook" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="640df29d-9d6f-45fd-9b50-1aee43bf1e81" Version="V1">
                         <uix:NApplicationCard.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
@@ -486,14 +486,5 @@
     </FlowStep>
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">800,134.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeVBA OutputValue="{x:Null}" CodeFilePath="utilities.vbs" DisplayName="Invoke VBA" EntryMethodName="WriteToCell" EntryMethodParameters="[{&quot;sheet1&quot;,&quot;F&quot;+index.ToString()}]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeVBA_3" />
-    </FlowStep>
   </Flowchart>
 </Activity>

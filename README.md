@@ -16,6 +16,12 @@ This project implements a UiPath bot that automates the creation of new contacts
 
 Two demonstration videos are provided to showcase the bot in action, highlighting both methods of execution.
 
+
+https://github.com/user-attachments/assets/edfa4828-e795-43aa-aa13-279e4cf71de1
+
+
+
+
 ## Usage
 
 1. Run the bot in UiPath by extracting the repository and open as local project by pressing the json file in the repository.

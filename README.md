@@ -24,4 +24,13 @@ Two demonstration videos are provided to showcase the bot in action, highlightin
 5. The bot will automatically fill in the contact details in Outlook 365.
 
 This bot provides a reliable and efficient way to automate contact creation while maintaining flexibility for different workflows.
+# Some insights:
+- One of the most difficult things I encountered was identifying buttons and fields and making them generic. The method is to use `AA` for older Windows versions and `UIA` for newer versions. Sometimes the default does not correctly identify the selector.
+- It is important to make the code for the selector generic. In the UIA method, the machine gives each element a number or several identifiers. Therefore, in these cases, we use * as a placeholder instead of a series of characters, for example:
+```
+<uia automationid='app' role='‏‏קבוצה' />
+<uia cls='___o3c7u90 f22iagw f122n59 f17wyjut f1mtd64y f1vx9l62 f1c21dwh f*' name='left-rail-appbar' />
+<uia cls='___8je7xm0 f10pin' name='אנשים' />
+<uia automationid='355fbd79-3ba2-4554-8f2d-0300fde91f30' cls='fui-Button r1alrhcs ___mi33tk0 f1brlhvm f136y8j8 f10xn8zz f1sl3k*' name='אנשים' />
+```
 

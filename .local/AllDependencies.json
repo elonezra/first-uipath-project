@@ -7570,16 +7570,16 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elone\\.nuget\\packages\\": {},
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Contacts",
       "projectName": "Contacts",
-      "projectPath": "C:\\Users\\elone\\Downloads\\תרגיל מועמד שלא עבר הכשרה - UiPath\\תרגיל מועמד שלא עבר הכשרה - UiPath\\Contacts\\.local",
-      "packagesPath": "C:\\Users\\elone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elone\\Downloads\\תרגיל מועמד שלא עבר הכשרה - UiPath\\תרגיל מועמד שלא עבר הכשרה - UiPath\\Contacts\\.local",
+      "projectPath": "C:\\Users\\USER\\Documents\\elons_work\\uipath-project\\.local",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Documents\\elons_work\\uipath-project\\.local",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ]
@@ -7608,7 +7608,7 @@
             "version": "[21.10.4, 21.10.4]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\elone\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\USER\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {

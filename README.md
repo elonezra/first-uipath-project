@@ -27,7 +27,8 @@ https://github.com/user-attachments/assets/edfa4828-e795-43aa-aa13-279e4cf71de1
 1. Run the bot in UiPath by extracting the repository and open as local project by pressing the json file in the repository.
 3. Ensure the Excel file containing contact details is available (you can use the example file).
 4. Select the desired method of data extraction (open or closed Excel file).
-5. The bot will automatically fill in the contact details in Outlook 365.
+5. make sure outlook is open, and if you use `Excel file open` make sure the `contact.xlsx` is open
+6. The bot will automatically fill in the contact details in Outlook 365.
 
 This bot provides a reliable and efficient way to automate contact creation while maintaining flexibility for different workflows.
 # Some insights:
